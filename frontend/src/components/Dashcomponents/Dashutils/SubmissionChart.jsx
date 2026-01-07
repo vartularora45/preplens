@@ -29,7 +29,7 @@ export default function SubmissionsChart() {
         const userId = user.id;
 
         const response = await axios.get(
-          `http://localhost:5000/api/submission/user/${userId}`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/submission/user/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

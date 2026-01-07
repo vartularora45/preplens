@@ -19,7 +19,7 @@ const Insights = () => {
       }
 
       const response = await axios.get(
-        'http://localhost:5000/api/analysis/ai-suggestions',
+        `${import.meta.env.VITE_BACKEND_URL}/api/analysis/ai-suggestions`,
         {
           headers: {
             Authorization: `Bearer ${token}`

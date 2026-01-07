@@ -122,7 +122,7 @@ export default function SubmissionsTable() {
     console.log("Deleting submission with ID:", id);
     const token = localStorage.getItem('token');
     await axios.delete(
-      `http://localhost:5000/api/submission/${id}`,
+      `${import.meta.env.VITE_BACKEND_URL}/api/submission/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -141,7 +141,7 @@ const resetUserSubmissions = async (userId, token) => {
   try {
     console.log("Resetting submissions for user ID:", userId);
     await axios.delete(
-      `http://localhost:5000/api/submission/reset/${userId}`,
+      `${import.meta.env.VITE_BACKEND_URL}/api/submission/reset/${userId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -170,7 +170,7 @@ const resetUserSubmissions = async (userId, token) => {
         const user = JSON.parse(userRaw);
         const userId = user.id;
 
-        const response = await axios.get(`http://localhost:5000/api/submission/user/${userId}`, {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/submission/user/${userId}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'

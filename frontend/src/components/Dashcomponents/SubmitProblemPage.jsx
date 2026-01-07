@@ -141,7 +141,7 @@ export default function SubmitProblemPage() {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/submission',
+        `${import.meta.env.VITE_BACKEND_URL}/api/submission`,
         payload,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -190,7 +190,7 @@ export default function SubmitProblemPage() {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/submission',
+        `${import.meta.env.VITE_BACKEND_URL}/api/submission`,
         payload,
         {
           headers: { Authorization: `Bearer ${token}` },

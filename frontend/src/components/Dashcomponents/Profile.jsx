@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Activity, Target, TrendingUp, AlertTriangle, CheckCircle, Clock, Brain, Zap, BarChart3 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/analysis/dashboard";
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/analysis/dashboard`;
 
 const difficultyColors = {
   easy: "text-green-400",

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { BarChart3, FileText, User, Bell, TrendingUp, TrendingDown, Clock, Target, AlertCircle, CheckCircle, XCircle, ArrowRight, Zap, Brain, X } from 'lucide-react';
 import AIInsights from './Dashutils/Insights.jsx';
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/api`;
 
 // ============================================================================
 // UTILITY FUNCTIONS - Pure logic, no side effects
