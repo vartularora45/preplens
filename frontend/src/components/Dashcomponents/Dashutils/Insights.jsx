@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Brain, Loader2, RefreshCw, AlertCircle, TrendingUp } from 'lucide-react';
 import axios from 'axios';
 
-const AIInsights = () => {
+const Insights = () => {
   const [insights, setInsights] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -321,4 +321,4 @@ const AIInsights = () => {
   );
 };
 
-export default AIInsights;
+export default Insights;
