@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { BarChart3, FileText, User, Bell, TrendingUp, TrendingDown, Clock, Target, AlertCircle, CheckCircle, XCircle, ArrowRight, Zap, Brain, X } from 'lucide-react';
-import AIInsights from './Dashutils/AIInsights';
+import AIInsights from './Dashutils/Insights.jsx';
 const API_BASE_URL = 'http://localhost:5000/api';
 
 // ============================================================================
