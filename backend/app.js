@@ -9,8 +9,22 @@ import feedbackRoutes from './routes/feedback.routes.js';
 
 db();
 const app = express();
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://preplens-l7ek.vercel.app"
+];
+
 app.use(cors({
-  origin: ["https://preplens-l7ek.vercel.app", "http://localhost:5173"],
+  origin: function(origin, callback) {
+    // allow requests with no origin (like Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
